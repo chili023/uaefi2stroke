@@ -11145,6 +11145,183 @@
 				)
 				(embedded_fonts no)
 			)
+		(symbol "Device:C_Polarized"
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0.254)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "C"
+					(at 0.635 2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify left)
+					)
+				)
+				(property "Value" "C_Polarized"
+					(at 0.635 -2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify left)
+					)
+				)
+				(property "Footprint" ""
+					(at 0.9652 -3.81 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "Polarized capacitor"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_keywords" "cap capacitor"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_fp_filters" "CP_*"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "C_Polarized_0_1"
+					(rectangle
+						(start -2.286 0.508)
+						(end 2.286 1.016)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy -1.778 2.286) (xy -0.762 2.286)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy -1.27 2.794) (xy -1.27 1.778)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(rectangle
+						(start 2.286 -0.508)
+						(end -2.286 -1.016)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type outline)
+						)
+					)
+				)
+				(symbol "C_Polarized_1_1"
+					(pin passive line
+						(at 0 3.81 270)
+						(length 2.794)
+						(name ""
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 0 -3.81 90)
+						(length 2.794)
+						(name ""
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
 	)
 	(junction
 		(at 54.61 128.27)
@@ -12549,16 +12726,6 @@
 			(type default)
 		)
 		(uuid "1f44c9cc-fe65-4c75-9770-ddd7a72eb49b")
-	)
-	(wire
-		(pts
-			(xy 142.24 347.98) (xy 138.43 347.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f87b759-ca7e-4211-aa35-93e8d2f5cccc")
 	)
 	(bus
 		(pts
@@ -16493,16 +16660,6 @@
 		)
 		(uuid "ecec4c77-e3ae-4d8b-beee-c2e784a92171")
 	)
-	(label "IN_PPS1"
-		(at 95.25 339.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "03206251-2d39-48f2-b04e-07517c79b3a4")
-	)
 	(label "VR_DISCRETE_A"
 		(at 125.73 220.98 0)
 		(effects
@@ -16542,26 +16699,6 @@
 			(justify left bottom)
 		)
 		(uuid "09110fc5-815b-456b-8c89-96bd1b70618f")
-	)
-	(label "OUT_LS1"
-		(at 57.15 355.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "094c492d-9a0d-4379-b0ba-27421b96ef91")
-	)
-	(label "12V_KEY"
-		(at 33.02 365.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0bf9bfe0-5cf0-4f6d-8f06-5576b0bfba1d")
 	)
 	(label "IN_PPS1"
 		(at 180.34 180.34 180)
@@ -16633,16 +16770,6 @@
 		)
 		(uuid "1a80acb4-e24e-4b55-a15e-67e10e14bd14")
 	)
-	(label "IN_IAT"
-		(at 115.57 341.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1b1bfb32-9c95-4db4-8aff-00107b627f99")
-	)
 	(label "OUT_INJ4"
 		(at 120.65 127 0)
 		(effects
@@ -16672,16 +16799,6 @@
 			(justify left bottom)
 		)
 		(uuid "20ea602e-701c-4ab5-81c3-c9f7c97da9fd")
-	)
-	(label "IN_MAP"
-		(at 21.59 341.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2198d330-2682-46e2-b80b-776988dbbd26")
 	)
 	(label "OUT_INJ1"
 		(at 120.65 119.38 0)
@@ -16723,36 +16840,6 @@
 		)
 		(uuid "2b3db069-cd6b-4bb1-b1d2-7173ecf509bb")
 	)
-	(label "IN_TPS2"
-		(at 66.04 350.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2b85debb-fc5a-48b9-a46d-e63b56f131b5")
-	)
-	(label "IN_BUTTON2"
-		(at 34.29 341.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2cdaa2f0-d7bf-4285-95aa-a73dc76f9fd4")
-	)
-	(label "IN_BUTTON1"
-		(at 34.29 339.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2fec8622-eac4-4ba5-bcc8-6d006798cced")
-	)
 	(label "OUT_LS3"
 		(at 106.68 162.56 180)
 		(effects
@@ -16762,16 +16849,6 @@
 			(justify right bottom)
 		)
 		(uuid "30f4369f-c55d-4b68-8bf5-6f7035662a66")
-	)
-	(label "OUT_LS_HOT1"
-		(at 26.67 355.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3435eba4-a86d-4d36-8e7e-05ab2ff9f570")
 	)
 	(label "OUT_LS4"
 		(at 106.68 167.64 180)
@@ -16783,36 +16860,6 @@
 		)
 		(uuid "3455eeb2-8e78-48ec-9dc3-5bf3c2d3ee28")
 	)
-	(label "OUT_IGN1"
-		(at 69.85 358.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "360b33d2-651e-4015-8243-dbcd325554c9")
-	)
-	(label "1_WBO_Ip"
-		(at 86.36 365.76 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3792e0c9-2b8e-4cb7-809d-f0796947b63d")
-	)
-	(label "OUT_INJ3"
-		(at 88.9 358.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "38a4a2f8-048d-4304-aefa-28ad64353653")
-	)
 	(label "VIGN"
 		(at 143.51 307.34 180)
 		(effects
@@ -16822,26 +16869,6 @@
 			(justify right bottom)
 		)
 		(uuid "3d6710ad-0ff8-4f49-ac34-0ad928c95f3b")
-	)
-	(label "VR_DISCRETE+"
-		(at 138.43 350.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3d89d345-a0df-40d0-a8d3-3f96c0947870")
-	)
-	(label "IN_AUX1"
-		(at 21.59 339.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3db6b0fc-72aa-4c3f-aaf4-e5373f58e86f")
 	)
 	(label "VBAT"
 		(at 167.64 256.54 0)
@@ -16933,16 +16960,6 @@
 		)
 		(uuid "46323a99-9fc8-47e1-9b0c-0fee64e06eed")
 	)
-	(label "OUT_IGN5"
-		(at 101.6 358.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "47a9b38e-7545-402d-b2cd-00d02b3de218")
-	)
 	(label "VREF1"
 		(at 167.64 238.76 0)
 		(effects
@@ -17003,16 +17020,6 @@
 		)
 		(uuid "512c9388-2bb3-4c53-af83-97ad62f32374")
 	)
-	(label "IN_CLT"
-		(at 128.27 341.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "516caed8-9b67-4f72-96a3-9ac031acdc5e")
-	)
 	(label "USB-"
 		(at 223.52 299.72 0)
 		(effects
@@ -17022,16 +17029,6 @@
 			(justify left bottom)
 		)
 		(uuid "55bab5df-b56f-4573-938a-a6271b393f3a")
-	)
-	(label "VR_MAX9924+"
-		(at 96.52 350.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "55c33200-31c7-4b84-9bd9-b11e83d425cd")
 	)
 	(label "VBUS"
 		(at 224.79 275.59 0)
@@ -17073,16 +17070,6 @@
 		)
 		(uuid "5eb9bd98-0c93-4e0a-a051-4e34d96288b3")
 	)
-	(label "OUT_IGN4"
-		(at 133.35 358.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "602e9810-3d81-4306-b772-cf02babc4e96")
-	)
 	(label "IGN2"
 		(at 154.94 85.09 0)
 		(effects
@@ -17093,16 +17080,6 @@
 		)
 		(uuid "60f827b0-8831-4c82-8c6b-f4f0f99b9570")
 	)
-	(label "IN_AUX2"
-		(at 53.34 347.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "612d7218-2431-48bd-9ca8-82b8405bfb6e")
-	)
 	(label "USB-"
 		(at 251.46 170.18 0)
 		(effects
@@ -17112,16 +17089,6 @@
 			(justify left bottom)
 		)
 		(uuid "61d7dc2b-e70b-4807-8979-16a252220e48")
-	)
-	(label "OUT_INJ1"
-		(at 57.15 358.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "62abe78f-cb26-4c4b-8021-6adf35d2c67c")
 	)
 	(label "OUT_IGN4"
 		(at 120.65 90.17 0)
@@ -17143,16 +17110,6 @@
 		)
 		(uuid "67d6a223-03ca-4da6-8c75-b590fa3d0711")
 	)
-	(label "OUT_LS2"
-		(at 39.37 355.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6b119837-04fa-4158-9eea-be4af9304e11")
-	)
 	(label "VR_DISCRETE-"
 		(at 66.04 218.44 0)
 		(effects
@@ -17172,16 +17129,6 @@
 			(justify left bottom)
 		)
 		(uuid "6b27b407-fe8d-4fdb-9aa7-06eb9425f76e")
-	)
-	(label "OUT_INJ5"
-		(at 120.65 358.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6b4fcbfb-b66a-485d-bab0-cab96c0a4e50")
 	)
 	(label "MISO3"
 		(at 248.92 114.3 0)
@@ -17373,16 +17320,6 @@
 		)
 		(uuid "8b737211-1790-40e9-afcd-9934d8b226e3")
 	)
-	(label "CAN-"
-		(at 128.27 339.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c92d991-0d66-4363-afab-5a9c784d940e")
-	)
 	(label "VR_DISCRETE_THR"
 		(at 180.34 157.48 180)
 		(effects
@@ -17432,26 +17369,6 @@
 			(justify right bottom)
 		)
 		(uuid "9407c399-2cbf-4b30-8a61-3cbb53b088a7")
-	)
-	(label "OUT_LS4"
-		(at 69.85 355.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9486a4c8-a966-4747-92f0-4faab2ff830d")
-	)
-	(label "OUT_LS_HOT2"
-		(at 26.67 358.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "955efa51-e24f-46d2-a4be-ba945a5c9f79")
 	)
 	(label "VR_DISCRETE"
 		(at 248.92 147.32 0)
@@ -17523,16 +17440,6 @@
 		)
 		(uuid "a093787f-28ef-4a99-a73d-661971a8095b")
 	)
-	(label "6_WBO_Un"
-		(at 86.36 363.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a0c0710b-ac04-4997-9fe9-0066c97ae39b")
-	)
 	(label "OUT_LS2"
 		(at 106.68 157.48 180)
 		(effects
@@ -17603,36 +17510,6 @@
 		)
 		(uuid "ab3419e8-1b0b-4580-8158-7d64cff6cb3e")
 	)
-	(label "IN_HALL1"
-		(at 83.82 347.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ac44a871-c846-41af-b096-d8ef86e922b4")
-	)
-	(label "IN_HALL2"
-		(at 96.52 347.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "adf6905a-02f4-4041-859f-e688ca1c8463")
-	)
-	(label "IN_TPS1"
-		(at 82.55 341.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ae091ee4-9be5-4918-ba2f-94670a3df5c1")
-	)
 	(label "VBUS"
 		(at 251.46 175.26 0)
 		(effects
@@ -17642,26 +17519,6 @@
 			(justify left bottom)
 		)
 		(uuid "ae39a9d6-8214-4b9c-bc09-541afb342c2f")
-	)
-	(label "IN_HALL3"
-		(at 125.73 347.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "af31e2b0-9e10-4bf9-a24f-d69df36ce79e")
-	)
-	(label "IN_PPS2"
-		(at 66.04 347.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b29b04a5-539d-431a-8fed-6467d8606deb")
 	)
 	(label "6_WBO_Un"
 		(at 40.64 49.53 0)
@@ -17703,16 +17560,6 @@
 		)
 		(uuid "b70fa948-2878-4031-8858-6cbce66d069f")
 	)
-	(label "OUT_INJ2"
-		(at 88.9 355.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b81d819d-d329-4979-964b-cf01f3ffd0f8")
-	)
 	(label "OUT_INJ5"
 		(at 120.65 129.54 0)
 		(effects
@@ -17743,16 +17590,6 @@
 		)
 		(uuid "bd9d7d9f-4990-4561-88d4-aa12417057c9")
 	)
-	(label "5_WBO_Rtrim"
-		(at 99.06 365.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bfff9664-29a8-403b-b5c9-b5dbdc781782")
-	)
 	(label "CAN-"
 		(at 255.27 129.54 180)
 		(effects
@@ -17762,16 +17599,6 @@
 			(justify right bottom)
 		)
 		(uuid "c06e3821-82bc-455f-96d9-7ba13c726789")
-	)
-	(label "OUT_LS3"
-		(at 39.37 358.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c1f6e5fa-09c3-4065-a07c-e61eec5574ff")
 	)
 	(label "IN_AUX2"
 		(at 180.34 195.58 180)
@@ -17813,16 +17640,6 @@
 		)
 		(uuid "c4195ecf-e43e-4de0-8fa1-b57b804816c2")
 	)
-	(label "IN_AUX3"
-		(at 83.82 350.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c46e4d6b-5a52-41e0-866d-7aecdc0546a8")
-	)
 	(label "OUT_LS2"
 		(at 120.65 142.24 0)
 		(effects
@@ -17863,16 +17680,6 @@
 		)
 		(uuid "d0ca51f1-da40-47c9-ab75-e3d0d2627ee1")
 	)
-	(label "OUT_IGN5"
-		(at 120.65 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5d639e6-27a7-4ec8-88fd-bf811db85dd9")
-	)
 	(label "IGN4"
 		(at 154.94 90.17 0)
 		(effects
@@ -17902,26 +17709,6 @@
 			(justify right bottom)
 		)
 		(uuid "da80e199-d289-45c6-a8d1-82b395dd0a07")
-	)
-	(label "CAN+"
-		(at 115.57 339.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "db007b05-78f6-4e14-a62e-07364557acd3")
-	)
-	(label "IN_FLEX"
-		(at 82.55 339.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "db8e557d-1cf4-4251-bfcd-5bba3b073d3c")
 	)
 	(label "LS_HOT1"
 		(at 154.94 104.14 0)
@@ -17973,16 +17760,6 @@
 		)
 		(uuid "e44b817c-9d05-4d4b-bb4b-744f97a9812b")
 	)
-	(label "OUT_IGN2"
-		(at 101.6 355.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e6524ae6-a31f-4429-a2d3-1c38ddb94c8c")
-	)
 	(label "EGT-"
 		(at 275.59 116.84 0)
 		(effects
@@ -17992,26 +17769,6 @@
 			(justify left bottom)
 		)
 		(uuid "e8a9b4b0-de31-4007-aca2-28fe96c684af")
-	)
-	(label "IN_KNOCK_RAW"
-		(at 95.25 341.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8dac13b-082c-4574-86b3-86ec5929e18a")
-	)
-	(label "OUT_INJ4"
-		(at 120.65 355.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e9568ce0-f2a6-4f54-a0e0-9357a426b2fc")
 	)
 	(label "USB-"
 		(at 229.87 283.21 180)
@@ -18043,16 +17800,6 @@
 		)
 		(uuid "f2ebb442-87cb-4c62-b5d6-e53099c68ad5")
 	)
-	(label "OUT_IGN3"
-		(at 133.35 355.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f77b3939-0ebc-4720-9d6e-fde023167978")
-	)
 	(label "VR_MAX9924+"
 		(at 66.04 236.22 0)
 		(effects
@@ -18072,16 +17819,6 @@
 			(justify right bottom)
 		)
 		(uuid "f925ecd5-db24-4623-ae88-ac5bf04d608c")
-	)
-	(label "VR_MAX9924-"
-		(at 125.73 350.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "fc622658-01d1-4d33-a219-8a9a86b8ff95")
 	)
 	(label "INTERNAL_MAP"
 		(at 180.34 203.2 180)
@@ -18860,81 +18597,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 64.77 355.6 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0c522ce3-638c-41e9-b54b-9b5f1b6eba77")
-		(property "Reference" "J19"
-			(at 63.5 353.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 63.5 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 64.77 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 64.77 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f210e8d1-bf7a-4de5-875e-c1be57319440")
-		)
-		(pin "2"
-			(uuid "a9699ea4-1ecd-4c8e-bc57-6ac2040f6d5b")
-		)
-		(pin "3"
-			(uuid "28b1fc43-c367-4737-a139-54d8918e5973")
-		)
-		(pin "4"
-			(uuid "86c9314a-ddd5-4207-a6ce-00177c9df277")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 71.12 401.32 0)
 		(unit 1)
@@ -18996,81 +18658,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 91.44 347.98 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "10365ff8-e80c-4af8-a231-ed5c253a2e69")
-		(property "Reference" "J16"
-			(at 90.17 345.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 90.17 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 91.44 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 91.44 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0c151d2f-4e13-4732-98dc-87eca5969f56")
-		)
-		(pin "2"
-			(uuid "b2e4fe21-d28a-45d4-9f75-64d26c75dfc1")
-		)
-		(pin "3"
-			(uuid "a58c1d65-ee9d-4365-9dc3-860fbeb4d2c9")
-		)
-		(pin "4"
-			(uuid "db86f621-4376-4281-88aa-9fe232287d4b")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J16")
 					(unit 1)
 				)
 			)
@@ -19214,81 +18801,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 133.35 347.98 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1969bc04-849b-4273-9ec7-2bd0fa12f11c")
-		(property "Reference" "J17"
-			(at 132.08 345.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 132.08 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 133.35 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 133.35 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.35 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7640e0e7-6612-4d64-8e35-2d3638601dd7")
-		)
-		(pin "2"
-			(uuid "67ad6224-a9e5-4a64-96b6-80e38198c7ae")
-		)
-		(pin "3"
-			(uuid "7e201062-1fd2-471c-a290-14944dd82a87")
-		)
-		(pin "4"
-			(uuid "113e16f2-f6dd-4c37-b66d-c5abb96b108a")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Fuse")
 		(at 86.36 134.62 90)
 		(unit 1)
@@ -19366,212 +18878,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 33.02 363.22 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1b6d1572-548e-4a61-b65e-23908c2d0fe7")
-		(property "Reference" "#PWR0111"
-			(at 29.21 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 38.1 363.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 33.02 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 33.02 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 33.02 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "decf40db-ee1c-447a-9a65-c1c9e8075e07")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0111")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDA")
-		(at 53.34 341.63 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1e0a07b5-704f-4e07-8853-696a71506b1c")
-		(property "Reference" "#PWR0130"
-			(at 46.99 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 47.7456 341.5157 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 53.34 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "59908514-675e-4188-82d3-8804edd0244d")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0130")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 96.52 355.6 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1eb9a28f-2435-47bd-8e30-8616e586fb32")
-		(property "Reference" "J20"
-			(at 95.25 353.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 95.25 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 96.52 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 96.52 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e27179b-0648-4672-a172-ee4fef845f19")
-		)
-		(pin "2"
-			(uuid "8ce6136e-dd8d-4399-a39f-5728d21fb080")
-		)
-		(pin "3"
-			(uuid "ab08d774-1219-4f33-9641-ed7a6cc8dd26")
-		)
-		(pin "4"
-			(uuid "24025ef9-77a8-422b-bee1-9c08ca9e121e")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3VA")
 		(at 26.67 391.16 90)
 		(unit 1)
@@ -19638,71 +18944,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDA")
-		(at 34.29 349.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "20fd006d-c595-42da-86ee-36b094eb3563")
-		(property "Reference" "#PWR0137"
-			(at 40.64 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 39.8844 349.1357 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 34.29 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a14bf469-217d-4aee-a77b-ea08787a97fe")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0137")
 					(unit 1)
 				)
 			)
@@ -20320,81 +19561,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 128.27 355.6 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2de5462c-76f8-428d-8673-cc0ddb496a7e")
-		(property "Reference" "J21"
-			(at 127 353.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 127 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 128.27 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 128.27 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff460c23-0c40-48b0-a80e-ce989bb4ec54")
-		)
-		(pin "2"
-			(uuid "8018d37f-9fc5-439d-b07e-f59bd37f37f7")
-		)
-		(pin "3"
-			(uuid "d9099134-0983-482e-b84e-b098e8a9826e")
-		)
-		(pin "4"
-			(uuid "8f2df015-6102-4677-b7b9-bdef8c93d852")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5VA")
 		(at 59.69 34.29 0)
 		(mirror y)
@@ -20543,72 +19709,6 @@
 		)
 	)
 	(symbol
-		(lib_id "hellen-one-common:+12V_RAW")
-		(at 99.06 363.22 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "32f75702-1eac-425e-8d55-43739d5c230e")
-		(property "Reference" "#PWR0139"
-			(at 95.25 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V_RAW"
-			(at 101.6 362.585 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 99.06 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 99.06 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 99.06 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7e3fe413-e44a-43cc-ac78-f5720103b075")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0139")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5VA")
 		(at 26.67 384.81 90)
 		(unit 1)
@@ -20678,72 +19778,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5VP")
-		(at 21.59 346.71 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "38e13afc-0a84-4376-a390-f276e6e6623b")
-		(property "Reference" "#PWR0134"
-			(at 25.4 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VP"
-			(at 16.51 346.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 21.59 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 21.59 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 21.59 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "16b045d7-b8ee-40d2-8467-062502ef2a40")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0134")
 					(unit 1)
 				)
 			)
@@ -20827,81 +19861,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "M2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 123.19 339.09 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3d0bd9ef-7f64-44e5-a16b-79b9cc289aab")
-		(property "Reference" "J1"
-			(at 121.92 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 121.92 335.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 123.19 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 123.19 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7a571bf4-3848-45fd-aec6-28633abb1fef")
-		)
-		(pin "2"
-			(uuid "0e2dc300-2b9c-4dce-84c2-ce3a7e178e7e")
-		)
-		(pin "3"
-			(uuid "4577c6fe-144c-4f75-9981-f97ad7c2e553")
-		)
-		(pin "4"
-			(uuid "b24c8577-b6f3-4cbc-bb3d-1f4940f2ac0f")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -21038,72 +19997,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "G2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 20.32 365.76 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "43581faf-7fcf-4954-bb30-54aed78d4d9b")
-		(property "Reference" "#PWR0138"
-			(at 13.97 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 15.24 365.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 20.32 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5684d431-d765-400d-9ea5-bb430e912339")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0138")
 					(unit 1)
 				)
 			)
@@ -21272,81 +20165,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 29.21 339.09 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5214c390-22cb-4330-bfc6-028f4b969c8f")
-		(property "Reference" "J13"
-			(at 27.94 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 27.94 335.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 29.21 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 29.21 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 29.21 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3743c40b-6d23-4309-85a6-8b0c328fe016")
-		)
-		(pin "2"
-			(uuid "5c431b76-af45-4998-a96b-33fca2d95014")
-		)
-		(pin "3"
-			(uuid "1faa91ad-615d-4be0-80d9-07e7fe265c39")
-		)
-		(pin "4"
-			(uuid "d8b68b37-01f9-4bbe-9a6d-9dd50b160b25")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -21639,147 +20457,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "#PWR0127")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDA")
-		(at 21.59 349.25 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "581c084a-51fb-4902-854b-6648a5fd05d2")
-		(property "Reference" "#PWR0135"
-			(at 15.24 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 15.9956 349.1357 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 21.59 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 21.59 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 21.59 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0f06b8d8-edbb-4692-9d72-85d15f3d09cd")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0135")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 27.94 363.22 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "58349050-e297-4ee8-85eb-0217981900af")
-		(property "Reference" "J22"
-			(at 26.67 360.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 26.67 359.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 27.94 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 27.94 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 27.94 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9c4d3a48-4fbd-417a-bd86-0f8782fc24b9")
-		)
-		(pin "2"
-			(uuid "73ec4118-a90f-458c-b0bf-ac3cc06e980c")
-		)
-		(pin "3"
-			(uuid "a4f3b4fd-3779-4b77-b7ba-e81294704422")
-		)
-		(pin "4"
-			(uuid "a15e748e-b991-4221-a8d2-e3efc35d4a2e")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J22")
 					(unit 1)
 				)
 			)
@@ -22215,72 +20892,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDA")
-		(at 53.34 350.52 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6ed27af7-80b5-49f2-8e51-4fdbd75fd6f9")
-		(property "Reference" "#PWR0133"
-			(at 46.99 350.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 48.26 350.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 350.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 350.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 53.34 350.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "64065277-5de8-492f-868a-8058f7baf5cb")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0133")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5VA")
 		(at 77.47 243.84 90)
 		(unit 1)
@@ -22350,71 +20961,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 142.24 347.98 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "72fa5d46-7070-4f92-8b25-753c45bfddae")
-		(property "Reference" "#PWR0131"
-			(at 148.59 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 147.32 347.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6b6e255b-4dde-49a3-8fdb-24d1f5c0735c")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -22498,72 +21044,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "M3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 20.32 363.22 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "764ac8ae-10db-4f64-8997-ed0df8293529")
-		(property "Reference" "#PWR0132"
-			(at 13.97 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 15.24 363.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 20.32 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4625a08d-f0b1-4efc-9375-c404eb5b72ad")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0132")
 					(unit 1)
 				)
 			)
@@ -23142,81 +21622,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "M5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 90.17 339.09 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7f80a7e8-557f-4098-b285-9024ab66e09b")
-		(property "Reference" "J11"
-			(at 88.9 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 88.9 335.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 90.17 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 90.17 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "96dd778f-bc64-475d-a59d-05bdbe5ea288")
-		)
-		(pin "2"
-			(uuid "ca45e563-1091-4494-b56d-110dc79d24e6")
-		)
-		(pin "3"
-			(uuid "ba1a937c-e7e3-4316-9c95-cf5816ac34a0")
-		)
-		(pin "4"
-			(uuid "c8724a15-2662-4e4c-804b-ae5220a16bfb")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -24339,71 +22744,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5VP")
-		(at 34.29 346.71 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9edcba0c-7d5e-4f6e-ad5c-34c8b600b804")
-		(property "Reference" "#PWR0136"
-			(at 30.48 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VP"
-			(at 39.37 346.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 34.29 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f82736de-e2ad-446f-9f26-90ef1fae0e76")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0136")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "hellen-one-common:+12V_RAW")
 		(at 99.06 134.62 0)
 		(unit 1)
@@ -24604,147 +22944,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5VP")
-		(at 53.34 339.09 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ade0d877-741a-43cb-8eef-dbd89c36a177")
-		(property "Reference" "#PWR0128"
-			(at 57.15 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VP"
-			(at 48.26 339.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 53.34 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8c34dbc7-a9af-457b-aebf-4e8194d8b29d")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0128")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 93.98 363.22 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b0f86030-26c8-4195-8813-912051779c1d")
-		(property "Reference" "J24"
-			(at 92.71 360.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 92.71 359.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 93.98 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 93.98 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 93.98 363.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bdb690af-bc64-4bd9-b64f-621ea7c17613")
-		)
-		(pin "2"
-			(uuid "a8a488e5-72c0-44d8-837a-723c07ed87e6")
-		)
-		(pin "3"
-			(uuid "a89cd926-5d97-416f-a9cc-2b70995bc271")
-		)
-		(pin "4"
-			(uuid "712b92cf-2aad-47af-b3c6-4cb6edb4f3ba")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J24")
 					(unit 1)
 				)
 			)
@@ -25068,81 +23267,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 60.96 347.98 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c4e4df86-4c5d-45ba-b028-5e05f1181b94")
-		(property "Reference" "J15"
-			(at 59.69 345.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 59.69 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 60.96 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "556fde6f-b357-4338-a1b8-db692ad47583")
-		)
-		(pin "2"
-			(uuid "cd8f9a8f-a650-414b-a03f-cb2d4c35d8f8")
-		)
-		(pin "3"
-			(uuid "e3d2e958-69c4-45a2-91cb-4653ecf471ef")
-		)
-		(pin "4"
-			(uuid "dcd52cfb-e445-4fa7-bf70-1e8f0b13cea5")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -26050,81 +24174,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 29.21 346.71 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d7a4d0f7-81fa-4a2d-8856-cbae904d86d1")
-		(property "Reference" "J14"
-			(at 27.94 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 27.94 342.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 29.21 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 29.21 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 29.21 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3aa2b89b-7fb8-4b6f-b689-ffcdf5600ba8")
-		)
-		(pin "2"
-			(uuid "291104e0-fc26-4ae2-a55a-265980b98190")
-		)
-		(pin "3"
-			(uuid "16de382b-9969-4be1-a7a8-648978e1c8d9")
-		)
-		(pin "4"
-			(uuid "ae5b38e0-d782-4064-a6ef-79633c54147e")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "hellen-one-common:Pad")
 		(at 259.08 151.13 0)
 		(unit 1)
@@ -26812,71 +24861,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDA")
-		(at 66.04 341.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e6d45040-81e8-4c35-877f-3f0cda73e4ca")
-		(property "Reference" "#PWR0129"
-			(at 72.39 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 71.6344 341.5157 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 66.04 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "58670bb1-5b18-4eb6-8d11-5119d00b8ff8")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR0129")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 62.23 401.32 0)
 		(unit 1)
@@ -27020,81 +25004,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "R40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 60.96 339.09 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eb30d438-9b06-44dd-9f55-0c8b1601e9d7")
-		(property "Reference" "J12"
-			(at 59.69 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 59.69 335.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 60.96 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8dba6fe1-9477-4c04-8f91-13af6316e15c")
-		)
-		(pin "2"
-			(uuid "9a2a9bda-70f5-4f9b-9816-82b2a7d0f97b")
-		)
-		(pin "3"
-			(uuid "f9ab77e8-75de-42d4-8bf7-6317585f43a0")
-		)
-		(pin "4"
-			(uuid "7993cc92-ff8c-4276-be65-6820c764eb70")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -27331,81 +25240,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 34.29 355.6 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f231fcb7-277d-4c39-9a73-e488f4652778")
-		(property "Reference" "J18"
-			(at 33.02 353.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x02_Odd_Even"
-			(at 33.02 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical"
-			(at 34.29 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 34.29 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 34.29 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0d285a4-f5c7-4a7c-ba8c-7c26fec8385c")
-		)
-		(pin "2"
-			(uuid "50e9e8fb-98b2-48c0-8956-4a87d4391ec3")
-		)
-		(pin "3"
-			(uuid "b3f1aa10-4fbf-481b-8629-800891816835")
-		)
-		(pin "4"
-			(uuid "ccf6d670-7112-40f9-9a73-2d505379e623")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "J18")
 					(unit 1)
 				)
 			)
@@ -28033,71 +25867,6 @@
 			(project "uaefi"
 				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
 					(reference "R38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5VP")
-		(at 66.04 339.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fec15ada-19ae-4b87-9b10-bdc23c95d787")
-		(property "Reference" "#PWR010"
-			(at 62.23 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VP"
-			(at 71.12 339.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 66.04 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6b75a45d-178b-40e9-88d5-462b1d5ee25f")
-		)
-		(instances
-			(project "uaefi"
-				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
-					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -32473,6 +30242,430 @@
 			(justify left bottom)
 		)
 		(uuid "62e03e6e-60bd-494a-8b69-9ae9a6160251")
+	)
+
+	(text "Bluetooth U5 (JDY-33) power-up fix, see uaEFI README: bulk caps on +5V and +3.3VA"
+		(exclude_from_sim no)
+		(at 330.2 264.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e7ec8c77-b67b-40e1-bd9a-2962cbcb8c7c")
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 340.36 276.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "65c6b185-2b33-41b7-82ab-65e838a1cc3a")
+		(property "Reference" "C40"
+			(at 340.36 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47uF 16V"
+			(at 340.36 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.4"
+			(at 340.36 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 340.36 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bluetooth power-up bulk capacitor"
+			(at 340.36 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 340.36 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "458b48ed-7225-49ba-a0d8-857f8fee38ad")
+		)
+		(pin "2"
+			(uuid "1693e19f-e444-4347-ac6a-95c06b7cdc69")
+		)
+		(instances
+			(project "uaefi"
+				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
+					(reference "C40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 340.36 273.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "456e01cb-99f4-42c6-9449-a123778984dc")
+		(property "Reference" "#PWR0702"
+			(at 340.36 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 340.36 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 340.36 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 340.36 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 340.36 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4f1d483-1ae7-4e67-8ef9-666da15573c6")
+		)
+		(instances
+			(project "uaefi"
+				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
+					(reference "#PWR0702")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 340.36 280.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "da47bd78-b76a-4b68-ba9b-2f536ae9deef")
+		(property "Reference" "#PWR0703"
+			(at 340.36 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 340.36 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 340.36 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 340.36 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 340.36 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c45be76-e4fc-4569-89dc-280524c0c6c5")
+		)
+		(instances
+			(project "uaefi"
+				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
+					(reference "#PWR0703")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 365.76 276.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a3a3399a-cd1d-4967-beb4-3646e9e20315")
+		(property "Reference" "C41"
+			(at 365.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470uF 6.3V"
+			(at 365.76 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10"
+			(at 365.76 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bluetooth power-up bulk capacitor"
+			(at 365.76 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 365.76 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0ab51e19-cc88-44a2-8516-7ecf57cff2ed")
+		)
+		(pin "2"
+			(uuid "701e0030-22d0-470e-8966-e26a1fea2f23")
+		)
+		(instances
+			(project "uaefi"
+				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
+					(reference "C41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3VA")
+		(at 365.76 273.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "af982ea1-bb2c-4e4c-96ff-25d8cb13de63")
+		(property "Reference" "#PWR0705"
+			(at 365.76 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 365.76 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 365.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9081ecb6-8d45-4b10-a0f2-31ab18e4aabf")
+		)
+		(instances
+			(project "uaefi"
+				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
+					(reference "#PWR0705")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 365.76 280.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "6725b8d1-de17-434d-93ac-97532b95fba6")
+		(property "Reference" "#PWR0706"
+			(at 365.76 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 365.76 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 365.76 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a19f181-804b-4e95-b1d7-53d28b880dbf")
+		)
+		(instances
+			(project "uaefi"
+				(path "/ac264c30-3e9a-4be2-b97a-9949b68bd497"
+					(reference "#PWR0706")
+					(unit 1)
+				)
+			)
+		)
 	)
 
 	(sheet_instances

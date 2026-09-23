@@ -8,9 +8,18 @@
   Steckerpins liegen auf dem Netz des alten Steckerpins
 - Neue Teile auf dem Blatt rechts (Papier A3 → A2)
 
-**Platine (`uaefi.kicad_pcb`): noch offen.** In KiCad: *Tools → Update PCB from Schematic* (F8), die alten
-Molex-Footprints verschwinden, die neuen Teile platzieren und routen. Danach `revision.txt` hochzählen
-(z. B. eigenes `BOARD_SUFFIX`/`BOARD_REVISION`) und ohne `[skip ci]` pushen, dann erzeugt GitHub Gerber/BOM/CPL.
+**Platine (`uaefi.kicad_pcb`): vorbereitet, Verlegen der Leitungen offen.**
+- Alte Teile entfernt (Mini-Fit J2/J3/J4/J5/J10, E-Gas-Treiber, F3/F4, Breakout-Stiftleisten J1/J11–J24),
+  ebenso alle Leiterbahnen, die nur zu ihnen führten.
+- Platine **145 × 110 mm** (vorher 100 × 100): 45 mm nach rechts für EGT/M8, 10 mm nach oben, weil die
+  Superseal-Pins 15,6 mm hinter die Kante reichen. Massefläche, Eck-Sperrflächen und H1/H3/H4 mitverschoben.
+- Neue Teile vorplatziert: J30/J31 oben, F11 dazwischen, M8 oben rechts, J32–J35 an der rechten Kante,
+  die vier MAX31855-Schaltungen (Anordnung wie die ursprüngliche EGT1-Schaltung, Unterseite) direkt davor,
+  C40/C41 unten rechts.
+- KiCad-DRC: 0 Fehler außer 4× „malformed courtyard“ im Superseal-Footprint der rusEFI-Bibliothek,
+  0 Abweichungen zum Schaltplan, **138 offene Verbindungen = das, was noch verlegt werden muss**.
+- Danach `revision.txt` hochzählen (eigenes `BOARD_SUFFIX`/`BOARD_REVISION` und `bom_replace`-Datei **ohne**
+  die Zeile, die U5/Bluetooth abwählt) und ohne `[skip ci]` pushen, dann erzeugt GitHub Gerber/BOM/CPL.
 
 | Referenz | Teil | Footprint |
 |---|---|---|
@@ -20,9 +29,11 @@ Molex-Footprints verschwinden, die neuen Teile platzieren und routen. Danach `re
 | Blätter EGT2–EGT4 | MAX31855 + Filter, U2004/U3004/U4004 usw. | wie U4 |
 | M8 | zweites `Module-wbo-0.6` | `hellen-one-wbo-0.6:wbo` |
 | F11 | PTC 200 mA für +12V Hall (A3 und B1) | 1206 |
+| C40 / C41 | 47 µF 16 V auf +5V / 470 µF 6,3 V auf +3,3VA, Einschaltfix Bluetooth (uaEFI-README) | CP_Elec 6.3x5.4 / 8x10, LCSC noch offen |
+| U5 | JDY-33 Bluetooth **bestückt** (uaEFI-Stückliste wählt es ab) | |
 | R39 | **4,7k bestückt** (Pull-up Radsensor 2 an B28), LCSC C17673 | 0805 |
 | R36 | **nicht bestückt** (DNP) | 0805 |
-| entfernt | J2, J3, J4, J5, J10 (Mini-Fit), Blätter DC Driver 1/2 (U1, U2, C1–C26, R9, R14, P15–P18), F3, F4 | |
+| entfernt | J2, J3, J4, J5, J10 (Mini-Fit), Blätter DC Driver 1/2 (U1, U2, C1–C26, R9, R14, P15–P18), F3, F4, Breakout-Stiftleisten J1, J11–J24 | |
 
 Das Hardware-Index-Problem von Lambda 2 ist gelöst, siehe Abschnitt 4.
 

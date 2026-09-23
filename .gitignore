@@ -2,4 +2,8 @@
 *.kicad_prl
 .idea/
 # we should live without KiCAD caches
+fp-info-cache# KiCad local history and lock files
+.history/
+~*.lck
+*-backups/
 fp-info-cache
