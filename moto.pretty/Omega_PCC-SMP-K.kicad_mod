@@ -1,0 +1,189 @@
+(footprint "Omega_PCC-SMP-K"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Omega PCC-SMP-K circuit board miniature thermocouple connector, horizontal. PRELIMINARY: hole pattern taken from Omega datasheet G-38 (4x 1.77mm, contacts 7.9mm apart), VERIFY against a real part before ordering. Mating side faces +X (board edge).")
+	(tags "thermocouple type K miniature SMP PCB")
+	(property "Reference" "REF**"
+		(at -4 -9.2 0)
+		(layer "F.SilkS")
+		(uuid "cba6daf8-2c99-4b56-8854-8f106ef3e02c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Omega_PCC-SMP-K"
+		(at -4 9.2 0)
+		(layer "F.Fab")
+		(uuid "8c2214d2-c041-4ea2-94c5-642c19e7cfa2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://cdn.sparkfun.com/datasheets/Prototyping/PCC-SMP-K-datasheet.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3a18e7cb-37b6-4775-a5d7-eaa75758819d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "967e5f9b-8c41-4dd9-8554-97737910a4f6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 6.8 -7.75)
+		(end 6.8 7.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "582f3ddf-9429-4204-b130-f112814bdd8b")
+	)
+	(fp_line
+		(start -14.5 -8.25)
+		(end 7.3 -8.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b9bbedf0-e3a0-4f58-b404-4ab338e92472")
+	)
+	(fp_line
+		(start -14.5 8.25)
+		(end -14.5 -8.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b5f6121e-31fb-42d1-acad-51cfdbad0068")
+	)
+	(fp_line
+		(start 7.3 -8.25)
+		(end 7.3 8.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e1e6cc4b-714b-4fac-ad2f-87eb3138e71b")
+	)
+	(fp_line
+		(start 7.3 8.25)
+		(end -14.5 8.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "50cc9b69-00ed-46ef-88bd-37a4e6a5d95e")
+	)
+	(fp_line
+		(start -14 -7.75)
+		(end 6.8 -7.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ae4a6f7d-d208-4677-9758-04bbee47e336")
+	)
+	(fp_line
+		(start -14 7.75)
+		(end -14 -7.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "582ba1ef-e6af-4c4d-b586-94a99957b609")
+	)
+	(fp_line
+		(start 6.8 -7.75)
+		(end 6.8 7.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6f9fa430-c2fc-42d7-a1c1-707722f9f8c4")
+	)
+	(fp_line
+		(start 6.8 7.75)
+		(end -14 7.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "56c7f972-70e6-4e15-821d-d920f921d19a")
+	)
+	(fp_text user "board edge / plug side, VERIFY"
+		(at 8.2 0 90)
+		(layer "F.Fab")
+		(uuid "dce9cf88-fdb4-4535-bec7-2a82cd277090")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 -3.95)
+		(size 2.6 2.6)
+		(drill 1.77)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "072e4f0c-4d2e-4a73-bece-2f40c11df2c7")
+	)
+	(pad "2" thru_hole circle
+		(at 0 3.95)
+		(size 2.6 2.6)
+		(drill 1.77)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ea96ddfa-46d2-4921-8266-fd6f9a5674f8")
+	)
+	(pad "MP" thru_hole circle
+		(at -6.8 -6.85)
+		(size 2.6 2.6)
+		(drill 1.77)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "12d39a7e-6a40-41a6-9234-954d47911f32")
+	)
+	(pad "MP" thru_hole circle
+		(at -6.8 6.85)
+		(size 2.6 2.6)
+		(drill 1.77)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ac392afe-7afa-45f6-acc6-439ec51e7a74")
+	)
+	(embedded_fonts no)
+)

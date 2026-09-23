@@ -1,5 +1,31 @@
 # uaEFI moto: PCB-Änderungen gegenüber uaEFI Rev F3
 
+## Stand
+
+**Schaltplan: umgesetzt und geprüft** (Branch `uaefi-moto`):
+- KiCad 10 ERC: 0 Fehler (Original: 0 Fehler), nur Bibliotheks- und Footprint-Link-Warnungen wie im Original
+- Netzliste gegen das Original geprüft: kein bestehendes Netz getrennt oder verbunden, alle 55 übernommenen
+  Steckerpins liegen auf dem Netz des alten Steckerpins
+- Neue Teile auf dem Blatt rechts (Papier A3 → A2)
+
+**Platine (`uaefi.kicad_pcb`): noch offen.** In KiCad: *Tools → Update PCB from Schematic* (F8), die alten
+Molex-Footprints verschwinden, die neuen Teile platzieren und routen. Danach `revision.txt` hochzählen
+(z. B. eigenes `BOARD_SUFFIX`/`BOARD_REVISION`) und ohne `[skip ci]` pushen, dann erzeugt GitHub Gerber/BOM/CPL.
+
+| Referenz | Teil | Footprint |
+|---|---|---|
+| J30 | Stecker A, TE 6437288-1 (Keying 1) | `Connectors:6437288-2` (gleiches Pinbild, am Datenblatt prüfen) |
+| J31 | Stecker B, TE 6437288-2 (Keying 2) | `Connectors:6437288-2` |
+| J32–J35 | EGT1–4, Omega PCC-SMP-K | `moto:Omega_PCC-SMP-K` (**vorläufig**, am echten Teil prüfen) |
+| Blätter EGT2–EGT4 | MAX31855 + Filter, U2004/U3004/U4004 usw. | wie U4 |
+| M8 | zweites `Module-wbo-0.6` | `hellen-one-wbo-0.6:wbo` |
+| F11 | PTC 200 mA für +12V Hall (A6) | 1206 |
+| entfernt | J2, J3, J4, J5, J10 (Mini-Fit), Blätter DC Driver 1/2 (U1, U2, C1–C26, R9, R14, P15–P18), F3, F4 | |
+
+Das Hardware-Index-Problem von Lambda 2 ist gelöst, siehe Abschnitt 4.
+
+---
+
 Basis: dieses Repo (`uaefi.kicad_sch` / `uaefi.kicad_pcb`, Rev F3, KiCad 10).
 Firmware-Board: `firmware/config/boards/hellen/uaefi-moto` im Fork `chili023/rusefi-clean`, Branch `uaefi-moto`.
 Die Netznamen unten stammen aus `gerber/uaefi.net` (Export der aktuellen Rev).
@@ -132,9 +158,11 @@ Crimpzange TE 1454509-1.
 - Zweites `Module-wbo-0.6` (M8), angeschlossen wie M5: `V5_IN`→`+5VA`, `CANH/CANL`→`/CAN+ /CAN-`,
   GND, SWD auf eigene Stiftleiste wie J6.
 - Sonden-Netze `LSU_Ip/Vm/Un/Rtrim/Htr` auf J_B31..34 und J_A28, Heizung + auf `+12V_RAW`.
-- **Hardware-Index über SEL1/SEL2 anders beschalten als M5** (M5: SEL1 → PULL_DOWN1, SEL2 offen = Index 1).
-  Die Firmware erwartet Index 1 und 5, wie beim super-uaEFI. Die passende SEL-Beschaltung für Index 5
-  in der Doku des Hellen-One-WBO-Moduls bzw. im super-uaEFI nachsehen, **nicht raten**.
+- **Hardware-Index:** Die WBO-Firmware liest SEL1/SEL2 dreiwertig (0 = low, 1 = offen, 2 = high),
+  Index = 3·SEL1 + SEL2 (`wideband/firmware/boards/f0_module/port.cpp`, `shared/strap_pin.cpp`).
+  M5: SEL1 low, SEL2 offen → Index 1 → rusEFI Lambda 1.
+  **M8: SEL1 offen, SEL2 an PULL_UP2 → Index 5 → rusEFI Lambda 2**, ohne Einstellung in TunerStudio
+  (gilt für ein frisches Modul ohne gespeicherte Konfiguration).
 - Im Hellen-One-Rahmen ist das Modul ein Footprint, die Bestückung kommt aus `modules/wbo/0.6`.
 
 ## 5. +12V-Ausgang für Hallsensoren (J_A6)
