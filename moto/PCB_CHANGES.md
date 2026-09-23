@@ -19,7 +19,9 @@ Molex-Footprints verschwinden, die neuen Teile platzieren und routen. Danach `re
 | J32–J35 | EGT1–4, Omega PCC-SMP-K | `moto:Omega_PCC-SMP-K` (**vorläufig**, am echten Teil prüfen) |
 | Blätter EGT2–EGT4 | MAX31855 + Filter, U2004/U3004/U4004 usw. | wie U4 |
 | M8 | zweites `Module-wbo-0.6` | `hellen-one-wbo-0.6:wbo` |
-| F11 | PTC 200 mA für +12V Hall (A6) | 1206 |
+| F11 | PTC 200 mA für +12V Hall (A3 und B1) | 1206 |
+| R39 | **4,7k bestückt** (Pull-up Radsensor 2 an B28), LCSC C17673 | 0805 |
+| R36 | **nicht bestückt** (DNP) | 0805 |
 | entfernt | J2, J3, J4, J5, J10 (Mini-Fit), Blätter DC Driver 1/2 (U1, U2, C1–C26, R9, R14, P15–P18), F3, F4 | |
 
 Das Hardware-Index-Problem von Lambda 2 ist gelöst, siehe Abschnitt 4.
@@ -48,83 +50,85 @@ das Pinraster ist gleich. **Vor der Bestellung mit der TE-Zeichnung abgleichen.*
 Gegenstecker: 4-1437290-0 (A), 4-1437290-1 (B), Kontakte 3-1447221-4 / -3,
 Crimpzange TE 1454509-1.
 
-### J_A: Leistung und Ausgänge (Keying 1)
+Quelle der Belegung: `moto/uaefi-moto-pinout.xlsx` (Blatt „Signale“). Tabellen unten sind daraus erzeugt.
 
-| Pin | Netz im uaEFI-Schaltplan | Signal |
+### J30 = Stecker A, Basis (TE 6437288-1, Keying 1)
+
+| Pin | Netz im Schaltplan | Signal |
 |---|---|---|
-| A1 | `+12V` | +12V (vorher A8) |
-| A2 | `/12V_KEY` | Zündung (vorher A7) |
-| A3 | `GND` | Masse Leistung |
-| A4 | `GND` | Masse Leistung |
-| A5 | `GND` | Masse Leistung |
-| A6 | `NEU /12V_HALL` | +12V für Hallsensoren: +12V_RAW → PTC 200 mA → TVS |
-| A7 | `/OUT_INJ1` | INJ1 |
-| A8 | `/OUT_INJ2` | INJ2 |
-| A9 | `/OUT_INJ3` | INJ3 |
-| A10 | `/OUT_INJ4` | INJ4 |
-| A11 | `/OUT_INJ5` | INJ5 |
-| A12 | `/OUT_INJ6` | INJ6 |
-| A13 | `/OUT_IGN1` | IGN1 |
-| A14 | `/OUT_IGN2` | IGN2 |
-| A15 | `/OUT_IGN3` | IGN3 |
-| A16 | `/OUT_IGN4` | IGN4 |
-| A17 | `/OUT_IGN5` | IGN5 |
-| A18 | `/OUT_IGN6` | IGN6 |
-| A19 | `/OUT_LS1` | GPPWM1 (mit Freilaufdiode) |
-| A20 | `/OUT_LS2` | GPPWM2 (mit Freilaufdiode) |
-| A21 | `/OUT_LS3` | GPPWM3 (mit Freilaufdiode) |
-| A22 | `/OUT_LS4` | GPPWM4 (mit Freilaufdiode) |
-| A23 | `/OUT_LS_HOT1` | schwacher Low-Side 1 (Relais) |
-| A24 | `/OUT_LS_HOT2` | schwacher Low-Side 2 (Relais) |
-| A25 | `+12V_RAW` | Lambda 1 Heizung + |
-| A26 | `/3_WBO_Heater` | Lambda 1 Heizung − |
-| A27 | `+12V_RAW` | Lambda 2 Heizung + |
-| A28 | `NEU /WBO2_Heater` | Lambda 2 Heizung − (M8 LSU_Htr) |
-| A29 | `/VBUS` | USB VBUS |
-| A30 | `/USB+` | USB D+ |
-| A31 | `/USB-` | USB D− |
-| A32 | `GND` | USB-Masse |
-| A33 | `/CAN+` | CAN H |
-| A34 | `/CAN-` | CAN L |
+| A1 | `+12V` | +12V Batterie / ECU-Versorgung |
+| A2 | `/12V_KEY` | Zündung (Schlüssel) |
+| A3 | `/12V_HALL` | +12V Hallsensoren (A) |
+| A4 | `+5VP` | +5V Sensor (A1) |
+| A5 | `+5VP` | +5V Sensor (A2) |
+| A6 | `GNDA` | Sensormasse (A1) |
+| A7 | `GNDA` | Sensormasse (A2) |
+| A8 | `GND` | Leistungsmasse (A1) |
+| A9 | `GND` | Leistungsmasse (A2) |
+| A10 | `GND` | Leistungsmasse (A3) |
+| A11 | `/OUT_INJ1` | Einspritzdüse 1 |
+| A12 | `/OUT_INJ2` | Einspritzdüse 2 |
+| A13 | `/OUT_IGN1` | Zündspule 1 |
+| A14 | `/OUT_IGN2` | Zündspule 2 |
+| A15 | `/OUT_LS1` | GPPWM1 |
+| A16 | `/OUT_LS2` | GPPWM2 |
+| A17 | `/IN_TPS1` | TPS1 |
+| A18 | `/IN_CLT` | CLT |
+| A19 | `/IN_IAT` | IAT |
+| A20 | `/IN_HALL1` | Hall 1 (Kurbelwelle) |
+| A21 | `+12V_RAW` | Lambda 1 Heizung + (LSU Pin 4) |
+| A22 | `/3_WBO_Heater` | Lambda 1 Heizung − (LSU Pin 3) |
+| A23 | `/1_WBO_Ip` | Lambda 1 Ip (LSU Pin 1) |
+| A24 | `/2_WBO_Vm` | Lambda 1 Vm (LSU Pin 2) |
+| A25 | `/6_WBO_Un` | Lambda 1 Un (LSU Pin 6) |
+| A26 | `/5_WBO_Rtrim` | Lambda 1 Rtrim (LSU Pin 5) |
+| A27 | `/VBUS` | USB VBUS |
+| A28 | `/USB+` | USB D+ |
+| A29 | `/USB-` | USB D− |
+| A30 | `GND` | USB Masse |
+| A31 | `/CAN+` | CAN High |
+| A32 | `/CAN-` | CAN Low |
+| A33 | `/OUT_LS_HOT1` | schwacher Low-Side 1 |
+| A34 | `/IN_KNOCK_RAW` | Klopfsensor |
 
-### J_B: Sensorik (Keying 2)
+### J31 = Stecker B, Erweiterung (TE 6437288-2, Keying 2)
 
-| Pin | Netz im uaEFI-Schaltplan | Signal |
+| Pin | Netz im Schaltplan | Signal |
 |---|---|---|
-| B1 | `+5VP` | +5V |
-| B2 | `+5VP` | +5V |
-| B3 | `GNDA` | Sensormasse |
-| B4 | `GNDA` | Sensormasse |
-| B5 | `GNDA` | Sensormasse |
-| B6 | `/IN_TPS1` | TPS1 |
-| B7 | `/IN_TPS2` | TPS2 |
-| B8 | `/IN_CLT` | CLT |
-| B9 | `/IN_IAT` | IAT |
-| B10 | `/IN_MAP` | MAP |
-| B11 | `/IN_AUX1` | Analog 1 (PA0) |
-| B12 | `/IN_AUX2` | Analog 2 (PA1) |
-| B13 | `/IN_PPS1` | Analog 3 (PA3) |
-| B14 | `/IN_PPS2` | Analog 4 (PC4) |
-| B15 | `/IN_AUX3` | Analog 5 (PA7) |
-| B16 | `/IN_HALL1` | Hall 1 |
-| B17 | `/IN_HALL2` | Hall 2 |
-| B18 | `/IN_HALL3` | Hall 3 / VSS |
-| B19 | `/IN_FLEX` | Flex |
-| B20 | `/IN_BUTTON1` | Schalteingang 1 |
-| B21 | `/VR_DISCRETE+` | VR1 + |
-| B22 | `/VR_DISCRETE-` | VR1 − |
-| B23 | `/VR_MAX9924+` | VR2 + |
-| B24 | `/VR_MAX9924-` | VR2 − |
-| B25 | `GND` | VR-Schirm |
-| B26 | `/IN_KNOCK_RAW` | Klopfsensor |
-| B27 | `/1_WBO_Ip` | Lambda 1 Ip |
-| B28 | `/2_WBO_Vm` | Lambda 1 Vm |
-| B29 | `/6_WBO_Un` | Lambda 1 Un |
-| B30 | `/5_WBO_Rtrim` | Lambda 1 Rtrim |
-| B31 | `NEU /WBO2_Ip` | Lambda 2 Ip (M8) |
-| B32 | `NEU /WBO2_Vm` | Lambda 2 Vm (M8) |
-| B33 | `NEU /WBO2_Un` | Lambda 2 Un (M8) |
-| B34 | `NEU /WBO2_Rtrim` | Lambda 2 Rtrim (M8) |
+| B1 | `/12V_HALL` | +12V Hallsensoren (B) |
+| B2 | `+5VP` | +5V Sensor (B) |
+| B3 | `GNDA` | Sensormasse (B) |
+| B4 | `GND` | Leistungsmasse (B) |
+| B5 | `/OUT_INJ3` | Einspritzdüse 3 |
+| B6 | `/OUT_INJ4` | Einspritzdüse 4 |
+| B7 | `/OUT_IGN3` | Zündspule 3 |
+| B8 | `/OUT_IGN4` | Zündspule 4 |
+| B9 | `/OUT_LS3` | GPPWM3 |
+| B10 | `/OUT_LS4` | GPPWM4 |
+| B11 | `/IN_AUX3` | Analog 5 |
+| B12 | `/OUT_LS_HOT2` | schwacher Low-Side 2 |
+| B13 | `/IN_TPS2` | TPS2 |
+| B14 | `/IN_MAP` | MAP |
+| B15 | `/IN_AUX1` | Analog 1 |
+| B16 | `/IN_AUX2` | Analog 2 |
+| B17 | `/IN_PPS1` | Analog 3 |
+| B18 | `/IN_PPS2` | Analog 4 |
+| B19 | `/IN_HALL2` | Hall 2 |
+| B20 | `/IN_HALL3` | Hall 3 / Radsensor 1 (VSS) |
+| B21 | `/IN_FLEX` | Flex |
+| B22 | `/IN_BUTTON1` | Schalteingang 1 |
+| B23 | `/VR_DISCRETE+` | VR1 + (diskret) |
+| B24 | `/VR_DISCRETE-` | VR1 − (diskret) |
+| B25 | `/VR_MAX9924+` | VR2 + (MAX9924) |
+| B26 | `/VR_MAX9924-` | VR2 − (MAX9924) |
+| B27 | `GND` | VR Schirm |
+| B28 | `/IN_BUTTON2` | Radsensor 2 (Schalteingang 2) |
+| B29 | `+12V_RAW` | Lambda 2 Heizung + (LSU Pin 4) |
+| B30 | `/WBO2_Heater` | Lambda 2 Heizung − (LSU Pin 3) |
+| B31 | `/WBO2_Ip` | Lambda 2 Ip (LSU Pin 1) |
+| B32 | `/WBO2_Vm` | Lambda 2 Vm (LSU Pin 2) |
+| B33 | `/WBO2_Un` | Lambda 2 Un (LSU Pin 6) |
+| B34 | `/WBO2_Rtrim` | Lambda 2 Rtrim (LSU Pin 5) |
 
 ### J_EGT1..4
 
@@ -165,9 +169,9 @@ Crimpzange TE 1454509-1.
   (gilt für ein frisches Modul ohne gespeicherte Konfiguration).
 - Im Hellen-One-Rahmen ist das Modul ein Footprint, die Bestückung kommt aus `modules/wbo/0.6`.
 
-## 5. +12V-Ausgang für Hallsensoren (J_A6)
+## 5. +12V-Ausgang für Hallsensoren (A3 und B1)
 
-`+12V_RAW` → PTC-Sicherung (z. B. 1206, 200 mA hold) → J_A6, dazu TVS gegen GND am Pin.
+`+12V_RAW` → PTC-Sicherung F11 (1206, 200 mA hold) → A3 und B1 (gleiches Netz).
 
 ## 6. Batterie für Stundenzähler
 
