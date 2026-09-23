@@ -37,10 +37,10 @@ Die Netznamen unten stammen aus `gerber/uaefi.net` (Export der aktuellen Rev).
 | Alt | Neu |
 |---|---|
 | J4 Mini-Fit 8 (A), J5 Mini-Fit 18 (B), J2 Mini-Fit 20 (C), J10 Mini-Fit 16 (D), J3 Mini-Fit 6 (E) | entfallen |
-| – | **J_A: TE 6437288-1**, Superseal 1.0, 34-polig, 90°, Keying 1 |
-| – | **J_B: TE 6437288-2**, Superseal 1.0, 34-polig, 90°, Keying 2 |
-| – | **J_EGT1..4: Omega PCC-SMP-K** (Mini-Thermoelementbuchse Typ K, liegend) |
-| J7 SPOX (USB extern), J8 Mini-USB | nicht mehr nötig (USB liegt auf J_A), USB-C J9 für Tischbetrieb bleibt |
+| – | **J30 = Stecker A: TE 6437288-1**, Superseal 1.0, 34-polig, 90°, Keying 1 |
+| – | **J31 = Stecker B: TE 6437288-2**, Superseal 1.0, 34-polig, 90°, Keying 2 |
+| – | **J32–J35 = EGT1–4: Omega PCC-SMP-K** (Mini-Thermoelementbuchse Typ K, liegend) |
+| J7 SPOX (USB extern), J8 Mini-USB | nicht mehr nötig (USB liegt auf Stecker A), USB-C J9 für Tischbetrieb bleibt |
 | U5 JDY-33 (Bluetooth) | optional, DNP empfohlen (bekanntes Einschaltproblem, siehe README) |
 
 Symbol, Footprint und 3D-Modell für den Superseal-Header liegen schon in
@@ -130,7 +130,7 @@ Quelle der Belegung: `moto/uaefi-moto-pinout.xlsx` (Blatt „Signale“). Tabell
 | B33 | `/WBO2_Un` | Lambda 2 Un (LSU Pin 6) |
 | B34 | `/WBO2_Rtrim` | Lambda 2 Rtrim (LSU Pin 5) |
 
-### J_EGT1..4
+### J32–J35 = EGT1–4
 
 | Buchse | + | − | Chip-Select am MAX31855 |
 |---|---|---|---|
@@ -161,7 +161,7 @@ Quelle der Belegung: `moto/uaefi-moto-pinout.xlsx` (Blatt „Signale“). Tabell
 
 - Zweites `Module-wbo-0.6` (M8), angeschlossen wie M5: `V5_IN`→`+5VA`, `CANH/CANL`→`/CAN+ /CAN-`,
   GND, SWD auf eigene Stiftleiste wie J6.
-- Sonden-Netze `LSU_Ip/Vm/Un/Rtrim/Htr` auf J_B31..34 und J_A28, Heizung + auf `+12V_RAW`.
+- Sonden-Netze `LSU_Ip/Vm/Un/Rtrim/Htr` komplett auf Stecker B (B29–B34), Heizung + auf `+12V_RAW`. Lambda 1 liegt komplett auf Stecker A (A21–A26).
 - **Hardware-Index:** Die WBO-Firmware liest SEL1/SEL2 dreiwertig (0 = low, 1 = offen, 2 = high),
   Index = 3·SEL1 + SEL2 (`wideband/firmware/boards/f0_module/port.cpp`, `shared/strap_pin.cpp`).
   M5: SEL1 low, SEL2 offen → Index 1 → rusEFI Lambda 1.
@@ -188,7 +188,7 @@ Quelle der Belegung: `moto/uaefi-moto-pinout.xlsx` (Blatt „Signale“). Tabell
 
 ## 8. Layout-Hinweise
 
-- J_A und J_B nebeneinander an einer Kante, zusammen etwa 95 mm. Die EGT-Buchsen an der Seitenkante.
-- Leistungsmasse (J_A3–5, INJ/IGN/LS) getrennt von Sensormasse (GNDA) führen, wie bei der uaEFI.
+- J30 (A) und J31 (B) nebeneinander an einer Kante, zusammen etwa 95 mm. Die EGT-Buchsen an der Seitenkante.
+- Leistungsmasse (A8–A10, A30, B4, B27; INJ/IGN/LS) getrennt von Sensormasse (GNDA) führen, wie bei der uaEFI.
 - USB D+/D− als 90-Ω-Differenzialpaar zum Stecker, ESD-Schutz direkt am Pin.
 - Gehäuse muss neu werden: 2× Superseal plus 4 Mini-Buchsen seitlich. Die Mini-Buchsen sind nicht wasserdicht.
